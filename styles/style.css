@@ -1,0 +1,150 @@
+/* Reset properties of elements used */
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    background: #EEEEEE;
+}
+
+h2 {
+    margin: 0 auto;
+}
+
+h3 {
+    margin: 0 auto;
+}
+
+h5 {
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 auto;
+}
+
+/**/
+
+main {
+    padding: 256px 20% 2.5% 20%;
+    /*TODO make the padding adaptive depending on the screen size*/
+}
+
+/**/
+
+header nav {
+    padding: 0 20% 0 20%;
+    margin: 0;
+    background-color: #009688;
+    height: 256px !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header nav div.container {
+    flex-wrap: wrap;
+    margin-left: 2.5%;
+}
+
+header nav, header nav a {
+    color: white;
+}
+
+#studies {
+    /*TODO since all properties are shared between all the cards, change the structure of the css to avoid code repetition*/
+}
+
+#studies img {
+    height: 20%;
+}
+
+#studies div {
+    flex-direction: column;
+    margin-left: 7.5%;
+    /*TODO the container does not fill all the space -it may be related to the orientation*/
+}
+
+#name {
+    line-height: 200px;
+    text-align: left;
+    /*FIXME safari renders differently the line height, resulting in a bad vertical alignment*/
+}
+
+#profiles {
+    line-height: 200px;
+    justify-content: flex-end;
+    /*TODO put icons and links to my social profiles -using Font Awesome-*/
+}
+
+#degree {
+    text-align: left;
+}
+
+#telephone {
+    text-align: right;
+}
+
+.fab {
+    margin: 0 2.5% 2.5% 0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    height: inherit;
+    width: inherit;
+}
+
+.item-size-50 {
+    flex-basis: 50%;
+    height: 50%;
+}
+
+.section-studies {
+    margin-top: 5%;
+    /*TODO think the perfect way to apply margins and paddings between sections/cards*/
+}
+
+.section-projects {
+    margin-top: 5%;
+}
+
+.section-about-me {
+    margin-top: 5%;
+}
+
+.profile-pic {
+    align-self: center;
+    border-radius: 128px;
+    height: 30%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: 0 2.5% 0 2.5%;
+}
+
+.card {
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 256px;
+    border-radius: 2px;
+    background-color: white
+    /*TODO set a max width -without pixels for better compatibility*/
+}
+
+@media only screen and (max-width: 780px) {
+    /* For tablet: */
+
+}
+
+@media only screen and (max-width: 600px) {
+    /* For mobile: */
+
+}
