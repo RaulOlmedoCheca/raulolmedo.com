@@ -6,28 +6,25 @@ body {
 }
 
 h2 {
-    margin: 0 auto;
+    margin: 0;
 }
 
 h3 {
-    margin: 0 auto;
+    margin: 0;
 }
 
 h5 {
-    margin: 0 auto;
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
 
 ul {
     list-style-type: none;
-    padding-left: 0;
-    margin: 0 auto;
-}
-
-/**/
-
-main {
-    padding: 256px 20% 2.5% 20%;
-    /*TODO make the padding adaptive depending on the screen size*/
+    padding: 0;
+    margin: 0;
 }
 
 /**/
@@ -53,18 +50,32 @@ header nav, header nav a {
     color: white;
 }
 
-#studies {
-    /*TODO since all properties are shared between all the cards, change the structure of the css to avoid code repetition*/
+main {
+    padding: 256px 20% 2.5% 20%;
 }
 
-#studies img {
+main div.section div.card.container img {
     height: 20%;
 }
 
-#studies div {
+main div.section div.card.container div.container {
     flex-direction: column;
     margin-left: 7.5%;
-    /*TODO the container does not fill all the space -it may be related to the orientation*/
+    flex-grow: 1;
+    align-items: flex-start;
+}
+
+main div.section div.card.container div.container h3, h5, p {
+    align-self: stretch;
+}
+
+main div.section div.card.container div.container h3, h5 {
+    height: 10%;
+    /*TODO put the text line to the container baseline -not in the centre of the box-*/
+}
+
+main div.section div.card.container div.container p {
+    height: 80%;
 }
 
 #name {
@@ -109,17 +120,9 @@ header nav, header nav a {
     height: 50%;
 }
 
-.section-studies {
+.section, .section, .section {
     margin-top: 5%;
     /*TODO think the perfect way to apply margins and paddings between sections/cards*/
-}
-
-.section-projects {
-    margin-top: 5%;
-}
-
-.section-about-me {
-    margin-top: 5%;
 }
 
 .profile-pic {
@@ -136,15 +139,29 @@ header nav, header nav a {
     height: 256px;
     border-radius: 2px;
     background-color: white
-    /*TODO set a max width -without pixels for better compatibility*/
+    /*TODO set a max width -without pixels for better compatibility-*/
 }
 
 @media only screen and (max-width: 780px) {
     /* For tablet: */
+    main {
+        padding: 256px 5% 2.5% 5%;
+    }
+
+    header nav {
+        padding: 0 5% 0 5%;
+    }
 
 }
 
 @media only screen and (max-width: 600px) {
     /* For mobile: */
+    main {
+        padding: 256px 2.5% 1.25% 2.5%;
+    }
+
+    header nav {
+        padding: 0 2.5% 0 2.5%;
+    }
 
 }
