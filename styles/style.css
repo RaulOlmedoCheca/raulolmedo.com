@@ -5,6 +5,10 @@ body {
     background: #EEEEEE;
 }
 
+h1 {
+    margin: 0;
+}
+
 h2 {
     margin: 0;
 }
@@ -29,6 +33,10 @@ ul {
 
 /**/
 
+a div.fab  {
+
+}
+
 header nav {
     padding: 0 20% 0 20%;
     margin: 0;
@@ -51,11 +59,13 @@ header nav, header nav a {
 }
 
 main {
-    padding: 256px 20% 2.5% 20%;
+    padding: calc(256px + 2.5%) 20% 0 20%;
 }
 
 main div.section div.card.container img {
     height: 20%;
+    /*TODO the image does not match the same margin and padding as the profile one in safari and in firefox
+    check the percentages, it may be related to the margin in the cards <-- check!*/
 }
 
 main div.section div.card.container div.container {
@@ -79,22 +89,31 @@ main div.section div.card.container div.container p {
 }
 
 #name {
+    flex-basis: 70%;
+    height: 50%;
     line-height: 200px;
     text-align: left;
     /*FIXME safari renders differently the line height, resulting in a bad vertical alignment*/
 }
 
 #profiles {
+    flex-basis: 30%;
+    height: 50%;
     line-height: 200px;
-    justify-content: flex-end;
-    /*TODO put icons and links to my social profiles -using Font Awesome-*/
+    justify-content: space-between;
+
+
 }
 
 #degree {
+    flex-basis: 50%;
+    height: 50%;
     text-align: left;
 }
 
 #telephone {
+    flex-basis: 50%;
+    height: 50%;
     text-align: right;
 }
 
@@ -115,14 +134,8 @@ main div.section div.card.container div.container p {
     width: inherit;
 }
 
-.item-size-50 {
-    flex-basis: 50%;
-    height: 50%;
-}
-
-.section, .section, .section {
-    margin-top: 5%;
-    /*TODO think the perfect way to apply margins and paddings between sections/cards*/
+.section {
+    margin-bottom: 2.5%;
 }
 
 .profile-pic {
@@ -134,18 +147,18 @@ main div.section div.card.container div.container p {
 }
 
 .card {
+    margin-bottom: 2.5%;
     padding: 5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     height: 256px;
     border-radius: 2px;
-    background-color: white
-    /*TODO set a max width -without pixels for better compatibility-*/
+    background-color: white;
 }
 
 @media only screen and (max-width: 780px) {
     /* For tablet: */
     main {
-        padding: 256px 5% 2.5% 5%;
+        padding: calc(256px + 2.5%) 5% 0 5%;
     }
 
     header nav {
@@ -157,7 +170,7 @@ main div.section div.card.container div.container p {
 @media only screen and (max-width: 600px) {
     /* For mobile: */
     main {
-        padding: 256px 2.5% 1.25% 2.5%;
+        padding: calc(256px + 2.5%) 2.5% 0 2.5%;
     }
 
     header nav {
