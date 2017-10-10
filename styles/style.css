@@ -33,8 +33,10 @@ ul {
 
 /**/
 
-a div.fab  {
-
+a div.fab i {
+    color: white;
+    display: table-cell;
+    /*TODO: Change icon*/
 }
 
 header nav {
@@ -46,7 +48,6 @@ header nav {
     top: 0;
     right: 0;
     left: 0;
-    z-index: -1;
 }
 
 header nav div.container {
@@ -101,8 +102,6 @@ main div.section div.card.container div.container p {
     height: 50%;
     line-height: 200px;
     justify-content: space-between;
-
-
 }
 
 #degree {
@@ -118,10 +117,18 @@ main div.section div.card.container div.container p {
 }
 
 .fab {
-    margin: 0 2.5% 2.5% 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #009688;
     position: fixed;
-    right: 0;
-    bottom: 0;
+    bottom: 5%;
+    right: 5%;
+    box-shadow: 0 2px 5px #666;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    /*TODO change alignment -table shit que no entiendo-*/
 }
 
 .link {
@@ -176,5 +183,7 @@ main div.section div.card.container div.container p {
     header nav {
         padding: 0 2.5% 0 2.5%;
     }
+
+    /*TODO change FAB media queries -margins-*/
 
 }
