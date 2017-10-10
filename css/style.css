@@ -78,6 +78,7 @@ main div.section div.card.container div.container {
 
 main div.section div.card.container div.container h3, h5, p {
     align-self: stretch;
+    /*TODO justify text*/
 }
 
 main div.section div.card.container div.container h3, h5 {
